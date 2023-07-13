@@ -156,7 +156,29 @@
         </div>
       </div>
     </footer>
+
+    @if (session('msg'))
+    <div class="toast-container position-fixed top-0 end-0 p-3 " >
+      <div id="liveToast" class="toast show border border-2 border-dark" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header border-bottom border-2 border-dark bg-primary text-light">
+          <i class="bi bi-bell-fill"></i> 
+          <strong class="me-auto ms-2">Notification</strong>
+          <small>Now</small>
+          <button type="button" class="btn-close bg-light p-2" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          {{ session('msg') }}
+        </div>
+      </div>
+    </div>
+    @endif
+
     <!-- Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+      setTimeout(function () {
+        $("#liveToast").removeClass("show");
+      }, 3000);
+    </script>
   </body>
 </html>

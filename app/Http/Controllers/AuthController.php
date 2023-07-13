@@ -56,4 +56,9 @@ class AuthController extends Controller
         $register->save();
         return redirect()->route('login')->with('msg','Registration is successful, please login');
     }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('index');
+    }
 }
