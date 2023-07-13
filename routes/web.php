@@ -21,3 +21,6 @@ Route::get('/', [ProductController::class, 'index'])->name('index');
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login/action', [AuthController::class, 'login_action'])->name('login_action');
+
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register/action', [AuthController::class, 'register_action'])->name('register_action');
