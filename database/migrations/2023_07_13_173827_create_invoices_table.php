@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('user_id');
             $table->string('phone_number');
             $table->string('address');
+            $table->string('payment');
             $table->timestamps();
         });
     }
