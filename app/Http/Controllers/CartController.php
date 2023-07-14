@@ -26,5 +26,10 @@ class CartController extends Controller
         return redirect()->route('index')->with('msg','product has been successfully added to cart');
     }
 
-
+    public function delete($id)
+    {
+        $cart = Cart::where('user_id', Auth::user()->id) ->where('id_cart', '=', $id);
+        $cart->delete();
+        return redirect()->route('cart')->with('msg','product has been successfully deleted from cart');
+    }
 }

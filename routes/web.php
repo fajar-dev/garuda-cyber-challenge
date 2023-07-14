@@ -28,3 +28,4 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
 Route::get('/cart/add/{id}', [CartController::class, 'add'])->name('add_cart');
+Route::get('/cart/delete/{id}', [CartController::class, 'delete'])->name('delete_cart');

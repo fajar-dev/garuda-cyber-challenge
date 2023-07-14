@@ -31,7 +31,7 @@
               </div>
               <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                 <div class="float-md-end">
-                  <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
+                  <a href="{{route('delete_cart', $row->id_cart)}}" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                 </div>
               </div>
             </div>
