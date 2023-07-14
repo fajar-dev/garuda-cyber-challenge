@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ProductController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
 Route::get('/cart/add/{id}', [CartController::class, 'add'])->name('add_cart');
 Route::get('/cart/delete/{id}', [CartController::class, 'delete'])->name('delete_cart');
+
+Route::get('/checkout', [InvoiceController::class, 'checkout'])->name('checkout');

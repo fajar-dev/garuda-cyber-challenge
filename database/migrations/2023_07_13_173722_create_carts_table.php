@@ -15,7 +15,7 @@ return new class extends Migration
             $table->bigIncrements('id_cart');
             $table->integer('user_id');
             $table->integer('product_id');
-            $table->integer('invoice_id')->nullable();
+            $table->string('invoice_uuid')->nullable();
             $table->timestamps();
         });
     }
