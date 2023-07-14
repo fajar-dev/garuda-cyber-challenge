@@ -28,7 +28,7 @@
           <div class="row gy-3">
             <!-- Left elements -->
             <div class="col-lg-2 col-sm-4 col-4">
-              <a href="https://mdbootstrap.com/" target="_blank" class="float-start">
+              <a href="{{ route('index') }}"  class="float-start">
                 <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" />
               </a>
             </div>
@@ -37,7 +37,7 @@
             <!-- Center elements -->
             <div class="order-lg-last col-lg-5 col-sm-8 col-8">
               <div class="d-flex float-end">
-                <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center"> <i class="fas fa-shopping-cart m-1 me-md-2"></i><p class="d-none d-md-block mb-0">My cart</p> </a>
+                <a href="{{ route('cart') }}" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center"> <i class="fas fa-shopping-cart m-1 me-md-2"></i><p class="d-none d-md-block mb-0">My cart</p> </a>
                 @if (Auth::check())
                 <a href="{{ route('logout') }}" class="border rounded py-1 px-3 nav-link d-flex align-items-center"> <i class="fas fa-sign-out m-1 me-md-2"></i><p class="d-none d-md-block mb-0">Sign Out</p> </a>                    
                 @else

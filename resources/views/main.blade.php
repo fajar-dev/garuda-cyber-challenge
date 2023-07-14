@@ -217,7 +217,7 @@
             <img src="{{$row->image}}" class="card-img-top rounded-2" style="aspect-ratio: 1 / 1"/>
           </a>
           <div class="card-body p-0 pt-2">
-            <a href="#!" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i class="fas fa-shopping-cart t fa-lg px-1 text-secondary"></i></a>
+            <a href="{{route('add_cart', $row->id)}}" class="btn btn-light border px-2 pt-2 float-end icon-hover"><i class="fas fa-shopping-cart t fa-lg px-1 text-secondary"></i></a>
             <h5 class="card-title">IDR. {{number_format($row->price)}}</h5>
             <p class="card-text mb-0">{{$row->product_name}}</p>
             <p class="text-muted">
