@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
-            $table->uuid('uuid');
+            $table->string('uuid');
             $table->string('user_id');
             $table->string('phone_number');
             $table->string('address');
+            $table->string('discount');
             $table->string('payment');
             $table->timestamps();
         });

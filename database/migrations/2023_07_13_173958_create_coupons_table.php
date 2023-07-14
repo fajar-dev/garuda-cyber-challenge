@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('code');
             $table->date('expired_date');
-            $table->integer('flag');
+            $table->string('invoice_uuid')->nullable();
             $table->timestamps();
         });
     }
