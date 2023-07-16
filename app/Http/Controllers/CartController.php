@@ -8,11 +8,14 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data = Cart::join('products', 'products.id', '=', 'carts.product_id')
+        $data['product'] = Cart::join('products', 'products.id', '=', 'carts.product_id')
         ->where('user_id', '=', Auth::user()->id)
         ->get();
+        $data['sum'] = Cart::join('products', 'products.id', '=', 'carts.product_id')
+        ->where('user_id', '=', Auth::user()->id)
+        ->sum('price');
         // dd($data);
         return view('cart', compact('data'));
     }
